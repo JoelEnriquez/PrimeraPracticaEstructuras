@@ -11,9 +11,9 @@ package com.mycompany.practicaestructura.objets;
 public class Bet {
     private Gambler gambler;
     private Double mount;
-    private Horse[] listHorses;
+    private Integer[] listHorses;
 
-    public Bet(String gambler, Double mount, Horse[] listHorses) {
+    public Bet(String gambler, Double mount, Integer[] listHorses) {
         this.gambler = new Gambler(gambler, 0);
         this.mount = mount;
         this.listHorses = listHorses;
@@ -35,11 +35,11 @@ public class Bet {
         this.mount = mount;
     }
 
-    public Horse[] getListHorses() {
+    public Integer[] getListHorses() {
         return listHorses;
     }
 
-    public void setListHorses(Horse[] listHorses) {
+    public void setListHorses(Integer[] listHorses) {
         this.listHorses = listHorses;
     }
     

@@ -1,5 +1,11 @@
-/home/joel/NetBeansProjects/PracticaEstructura/src/main/java/com/mycompany/practicaestructura/reader/ReaderBet.java
-/home/joel/NetBeansProjects/PracticaEstructura/src/main/java/com/mycompany/practicaestructura/objets/Gambler.java
-/home/joel/NetBeansProjects/PracticaEstructura/src/main/java/com/mycompany/practicaestructura/objets/Horse.java
-/home/joel/NetBeansProjects/PracticaEstructura/src/main/java/com/mycompany/practicaestructura/objets/Bet.java
-/home/joel/NetBeansProjects/PracticaEstructura/src/main/java/com/mycompany/practicaestructura/fronted/MainForm.java
+/home/joel/Documentos/PrimeraPracticaEstructuras/PracticaEstructura/src/main/java/com/mycompany/practicaestructura/reader/RateBets.java
+/home/joel/Documentos/PrimeraPracticaEstructuras/PracticaEstructura/src/main/java/com/mycompany/practicaestructura/fronted/ReportsForm.java
+/home/joel/Documentos/PrimeraPracticaEstructuras/PracticaEstructura/src/main/java/com/mycompany/practicaestructura/functions/DynamicArray.java
+/home/joel/Documentos/PrimeraPracticaEstructuras/PracticaEstructura/src/main/java/com/mycompany/practicaestructura/objets/Report.java
+/home/joel/Documentos/PrimeraPracticaEstructuras/PracticaEstructura/src/main/java/com/mycompany/practicaestructura/objets/Bet.java
+/home/joel/Documentos/PrimeraPracticaEstructuras/PracticaEstructura/src/main/java/com/mycompany/practicaestructura/reader/ReaderBet.java
+/home/joel/Documentos/PrimeraPracticaEstructuras/PracticaEstructura/src/main/java/com/mycompany/practicaestructura/structures/Nodo.java
+/home/joel/Documentos/PrimeraPracticaEstructuras/PracticaEstructura/src/main/java/com/mycompany/practicaestructura/fronted/MainForm.java
+/home/joel/Documentos/PrimeraPracticaEstructuras/PracticaEstructura/src/main/java/com/mycompany/practicaestructura/objets/Gambler.java
+/home/joel/Documentos/PrimeraPracticaEstructuras/PracticaEstructura/src/main/java/com/mycompany/practicaestructura/objets/Horse.java
+/home/joel/Documentos/PrimeraPracticaEstructuras/PracticaEstructura/src/main/java/com/mycompany/practicaestructura/structures/CircularLinkedList.java

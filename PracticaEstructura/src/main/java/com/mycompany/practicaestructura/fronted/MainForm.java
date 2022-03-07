@@ -4,14 +4,13 @@
  */
 package com.mycompany.practicaestructura.fronted;
 
+import com.mycompany.practicaestructura.objets.Report;
 import com.mycompany.practicaestructura.reader.ReaderBet;
-import com.mycompany.practicaestructura.structures.CircularLinkedList;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
@@ -350,10 +349,9 @@ public class MainForm extends javax.swing.JFrame {
                         agregarApuestaAutomatica(line);
                     }
                 }
-            } catch (Exception e) {
+            } catch (IOException e) {
                 e.printStackTrace(System.out);
             }
-            System.err.println(file.getPath());
         }
     }//GEN-LAST:event_uploadButtonActionPerformed
 
@@ -515,6 +513,7 @@ public class MainForm extends javax.swing.JFrame {
         if (orderHorses.size() < 10) {
             JOptionPane.showMessageDialog(null, "Selecciona todas las casillas");
         } else {
+            orderHorsesDialog.setVisible(false);
             //Calcular el tamaño del arreglo total
             int sizeBets = 0;
             if (fileBets != null) {
@@ -537,8 +536,16 @@ public class MainForm extends javax.swing.JFrame {
             //Iniciar la verificacion de las apuestas
             ReaderBet readerBet = new ReaderBet(bets, orderHorses);
             readerBet.analizarApuestas();
+            Report reportVerApuestas = new Report("Verificacion Apuestas", readerBet.getPromedioTiempoDuplicacion(), readerBet.getPromedioPasosDuplicacion(), readerBet.getCantidadMayorDuplicacion(), readerBet.getCantidadMenorDuplicacion());
 
             //Mostrar resultados
+            
+            this.setVisible(false);
+            ReportsForm reportsForm = new ReportsForm(this);
+            reportsForm.setVerificacionDupli(reportVerApuestas);
+            reportsForm.setErroresApuestas(readerBet.getErroresApuestas());
+            reportsForm.setLocationRelativeTo(null);
+            reportsForm.setVisible(true);
         }
     }//GEN-LAST:event_startButtonActionPerformed
 
@@ -617,6 +624,15 @@ public class MainForm extends javax.swing.JFrame {
         }
         return nuevoArreglo;
     }
+    
+    public void restart(){
+        file = null;
+        numberBets = 0;
+        bets = null;
+        fileBets = null;
+        manuallyBets = null;
+    }
+    
     /**
      * @param args the command line arguments
      */
